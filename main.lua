@@ -116,7 +116,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://96623026167987" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "" }),
     Player = Window:AddTab({ Title = "PvP Setting", Icon = "" }),
     Teleport = Window:AddTab({ Title = "Travel", Icon = "" }),
@@ -3551,7 +3551,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
       local RoughSea = Tabs.Main:AddSection(" Kitsune ")
 
 
-      local ToggleEspKitsune = Tabs.Main:AddToggle("ToggleEspKitsune", {Title = "Định vị Đảo kisune",Description = "", Default = false })
+      local ToggleEspKitsune = Tabs.Main:AddToggle("ToggleEspKitsune", {Title = "ESP Kitsune Island",Description = "", Default = false })
       ToggleEspKitsune:OnChanged(function(Value)
         KitsuneIslandEsp = Value
         while KitsuneIslandEsp do wait()
@@ -3620,7 +3620,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
     end)
 
 
-      local ToggleCollectAzure = Tabs.Main:AddToggle("ToggleCollectAzure", {Title = "Nhặt Hồn Lửa",Description = "", Default = false })
+      local ToggleCollectAzure = Tabs.Main:AddToggle("ToggleCollectAzure", {Title = "Auto Collect Azure",Description = "", Default = false })
       ToggleCollectAzure:OnChanged(function(Value)
          _G.CollectAzure = Value
       end)
@@ -3642,7 +3642,7 @@ end
 if Third_Sea then
     local RoughSea = Tabs.Main:AddSection("Rough Sea")
 
-    local ToggleSailBoat = Tabs.Main:AddToggle("ToggleSailBoat", {Title = "Mua Thuyền + Ngồi Vào",Description = "", Default = false })
+    local ToggleSailBoat = Tabs.Main:AddToggle("ToggleSailBoat", {Title = "Auto Buy Ship and Sit",Description = "", Default = false })
     ToggleSailBoat:OnChanged(function(Value)
         _G.SailBoat = Value
     end)
@@ -3703,7 +3703,7 @@ if Third_Sea then
 	end)
 	
 
-    local ToggleTerrorshark = Tabs.Main:AddToggle("ToggleTerrorshark", {Title = " Giết Terrorshark",Description = "", Default = false })
+    local ToggleTerrorshark = Tabs.Main:AddToggle("ToggleTerrorshark", {Title = "Auto TerrorShark",Description = "", Default = false })
 
     ToggleTerrorshark:OnChanged(function(Value)
         _G.AutoTerrorshark = Value
@@ -3744,7 +3744,7 @@ if Third_Sea then
 
 
 
-     local TogglePiranha = Tabs.Main:AddToggle("TogglePiranha", {Title = " Giết Piranha",Description = "", Default = false })
+     local TogglePiranha = Tabs.Main:AddToggle("TogglePiranha", {Title = "Auto Kill Piranha",Description = "", Default = false })
 
      TogglePiranha:OnChanged(function(Value)
         _G.farmpiranya = Value
@@ -3786,7 +3786,7 @@ if Third_Sea then
 
 
 
-     local ToggleShark = Tabs.Main:AddToggle("ToggleShark", {Title = "Giết Cá Mập",Description = "", Default = false })
+     local ToggleShark = Tabs.Main:AddToggle("ToggleShark", {Title = "Auto Kill Shark",Description = "", Default = false })
      ToggleShark:OnChanged(function(Value)
         _G.AutoShark = Value
      end)
@@ -3827,7 +3827,7 @@ if Third_Sea then
 
 
 
-    local ToggleFishCrew = Tabs.Main:AddToggle("ToggleFishCrew", {Title = " Giết Fish Crew",Description = "", Default = false })
+    local ToggleFishCrew = Tabs.Main:AddToggle("ToggleFishCrew", {Title = "Auto Kill Fish Crew",Description = "", Default = false })
     ToggleFishCrew:OnChanged(function(Value)
        _G.AutoFishCrew = Value
     end)
